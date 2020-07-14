@@ -1,8 +1,8 @@
 from math import factorial
 
 
-def number_of_paths(N, M):
-    return factorial(N + M) // (factorial(N) * factorial(M))
+def number_of_paths(n, m):
+    return factorial(n + m) // (factorial(n) * factorial(m))
 
 
 N, M = 20, 20
