@@ -41,6 +41,15 @@ def get_diagonal_numbers(spiral):
     return arr
 
 
-s = create_spiral(1001)
-d = get_diagonal_numbers(s)
-print(sum(d))
+def calculate_diagonal_sum(size):
+    total = 1
+    i = 1
+    jump_length = 2
+    while i <= size * size - 1:
+        total += 4 * i + 10 * jump_length
+        i += jump_length * 4
+        jump_length += 2
+    return total
+
+
+print(calculate_diagonal_sum(1001))
